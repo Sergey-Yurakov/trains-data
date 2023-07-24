@@ -1,0 +1,50 @@
+.wrapper {
+    height: max-content;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background: white;
+}
+
+.title {
+    text-align: left;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.input {
+    border: none;
+    background: none;
+}
+
+table {
+    width: 100%;
+}
+
+.btnWrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    font-size: 15px;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.dangerColor {
+    color: red;
+}
+
+.normalColor {
+    color: black;
+}
+

@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    gap: 50px;
+}
+
+.block {
+    display: inherit;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background: white;
+}
+
+.title {
+    padding-left: 15px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+td {
+    padding: 10px 0 10px 15px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody > tr {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+tr:last-child {
+    border: none;
+}
+
+thead {
+    border: 1px solid #f6f8fa;
+    background-color: #f6f8fa;
+    color: #8b949b;
+}

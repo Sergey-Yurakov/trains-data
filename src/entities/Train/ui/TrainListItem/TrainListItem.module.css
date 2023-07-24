@@ -1,0 +1,10 @@
+.content {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+}
+
+.active {
+    background-color: #e3e8e8;;
+}
