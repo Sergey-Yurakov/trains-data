@@ -1,4 +1,4 @@
-import { TrainSchema } from '../../../../entities/Train';
+import { TrainSchema } from '@/entities/Train';
 
 export interface StateSchema {
     trains: TrainSchema;

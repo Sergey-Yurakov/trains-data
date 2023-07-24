@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 
-import { MainPage } from '../pages/MainPage';
+import { MainPage } from '@/pages/MainPage';
 import './styles/App.css';
 
 function App() {

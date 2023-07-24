@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { trainsDataReducer } from '../../../../entities/Train';
+import { trainsDataReducer } from '@/entities/Train';
 import { StateSchema } from './StateSchema';
 
 export function createReduxStore(initialState?: StateSchema) {

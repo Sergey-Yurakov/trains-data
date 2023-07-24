@@ -1,7 +1,7 @@
 import { memo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import { useAppDispatch } from '../../../../shared/hooks/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { getTrainsData, getTrainsError, getTrainsIsLoading } from '../../model/selectors/getTrains/getTrainsData';
 import { fetchTrainsData } from '../../model/services/fetchTrainsData/fetchTrainsData';
 import { TrainList } from '../TrainList/TrainList';
