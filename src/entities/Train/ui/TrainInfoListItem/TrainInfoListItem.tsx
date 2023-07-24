@@ -1,4 +1,4 @@
-import { ChangeEvent, memo, useCallback, useEffect, useState } from 'react';
+import React, {ChangeEvent, memo, useCallback, useEffect, useState} from 'react';
 
 import cl from '../TrainInfoList/TrainInfoList.module.css';
 
@@ -19,6 +19,18 @@ export const TrainInfoListItem = memo((props: TrainInfoListItemProps) => {
         force: false,
         speed: false,
     });
+
+    const validateInputIntegers = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (!/[0-9]/.test(event.key) && event.key !== 'Backspace') {
+            event.preventDefault();
+        }
+    };
+
+    const validateInputDouble = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (!/[0-9|.]/.test(event.key) && event.key !== 'Backspace') {
+            event.preventDefault();
+        }
+    };
 
     useEffect(() => {
         if (!isValidValue.speed && !isValidValue.force && !isValidValue.engineAmperage) {
@@ -72,6 +84,7 @@ export const TrainInfoListItem = memo((props: TrainInfoListItemProps) => {
                         defaultValue={engineAmperage || 0}
                         className={[cl.input, isValidValue.engineAmperage ? cl.dangerColor : cl.normalColor].join(' ')}
                         onChange={e => onChangeEngineAmperage(e)}
+                        onKeyDown={validateInputIntegers}
                     />
                 </td>
                 <td>
@@ -79,6 +92,7 @@ export const TrainInfoListItem = memo((props: TrainInfoListItemProps) => {
                         defaultValue={force || 0}
                         className={[cl.input, isValidValue.force ? cl.dangerColor : cl.normalColor].join(' ')}
                         onChange={e => onChangeForce(e)}
+                        onKeyDown={validateInputDouble}
                     />
                 </td>
                 <td>
@@ -86,6 +100,7 @@ export const TrainInfoListItem = memo((props: TrainInfoListItemProps) => {
                         defaultValue={speed || 0}
                         className={[cl.input, isValidValue.speed ? cl.dangerColor : cl.normalColor].join(' ')}
                         onChange={e => onChangeSpeed(e, index)}
+                        onKeyDown={validateInputIntegers}
                     />
                 </td>
             </tr>

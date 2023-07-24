@@ -17,7 +17,7 @@ export const TrainInfoList = memo((props: TrainItemInfoProps) => {
     const dt = useMemo(() => [...data.characteristics], [data.characteristics]);
 
     const handleClick = useCallback(() => {
-        console.log(dt.sort((a, b) => a.speed - b.speed));
+        console.log([...dt].sort((a, b) => a.speed - b.speed));
     }, [dt]);
 
     useEffect(() => {
@@ -26,7 +26,6 @@ export const TrainInfoList = memo((props: TrainItemInfoProps) => {
                 ...dt[indexValue],
                 speed: newSpeed,
             };
-            console.log('dt', dt);
         }
     }, [data, dt, indexValue, newSpeed]);
 
